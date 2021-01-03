@@ -1,0 +1,36 @@
+    <div class = "d-flex flex-row bd-highlight mb-3">
+    
+    <div class ="form-froup row">
+    <label class ="col-sm-2 col-form-label">Program Name</label>
+    <div class ="col-sm-10">
+        <input type ="text" class ="form-control" [(ngModel)] ="name"
+        placeholder="Enter Program Name">
+    </div>
+    
+    <label class ="col-sm-2 col-form-label">Category</label>
+    <div class ="col-sm-10">
+        <input type ="text" class ="form-control" [(ngModel)] ="category"
+        placeholder="Enter Category">
+    </div>
+
+    <label class ="col-sm-2 col-form-label">Description</label>
+    <div class ="col-sm-10">
+        <input type ="text" class ="form-control" [(ngModel)] ="description"
+        placeholder="Enter Description">
+    </div>
+    
+
+    <label class ="col-sm-2 col-form-label">TrainerId</label>
+    <div class ="col-sm-10">
+        <input type ="text" class ="form-control" [(ngModel)] ="trainer"
+        placeholder="Enter TrainerID">
+    </div>
+    </div>
+</div>
+
+<button (click) = "addProgram()" *ngIf="program.programID==0" class="btn btn-primary">
+    Add
+</button>
+<button (click) = "updateProgram()" *ngIf="program.programID!=0" class="btn btn-primary">
+    Update
+</button>

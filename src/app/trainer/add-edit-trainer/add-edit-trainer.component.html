@@ -1,0 +1,32 @@
+    <div class ="form-froup row">
+    <label class ="col-sm-2 col-form-label">Trainer Name</label>
+    <div class ="col-sm-10">
+        <input type ="text" class ="form-control" [(ngModel)]="name"
+        placeholder="Enter Trainer Name">
+    </div>
+
+    <label class ="col-sm-2 col-form-label">Trainer Age</label>
+    <div class ="col-sm-10">
+        <input type ="text" class ="form-control" [(ngModel)] ="age"
+        placeholder="Enter Trainer Age">
+    </div>
+    
+    <label class ="col-sm-2 col-form-label">Trainer Gym</label>
+    <div class ="col-sm-10">
+        <input type ="text" class ="form-control" [(ngModel)] ="gym"
+        placeholder="Enter Trainer Gym">
+    </div>
+
+    <label class ="col-sm-2 col-form-label">Trainer Email</label>
+    <div class ="col-sm-10">
+        <input type ="text" class ="form-control" [(ngModel)] ="email"
+        placeholder="Enter Trainer Email">
+    </div>
+</div>
+
+<button (click) = "addTrainer()" *ngIf="trainer.trainerID==0" class="btn btn-primary">
+    Add
+</button>
+<button (click) = "updateTrainer()" *ngIf="trainer.trainerID!=0" class="btn btn-primary">
+    Update
+</button>
