@@ -16,7 +16,7 @@ export class SharedService {
   }
 
   getTrainerById(val:any){
-  return this.http.get<any>(this.APIUrl+'/trainer/trainerID', val)
+  return this.http.get<any>(this.APIUrl+'/trainer/', val)
   }
   
 
@@ -25,7 +25,7 @@ export class SharedService {
   }
 
   updateTrainer(val:any){
-    return this.http.put(this.APIUrl + '/trainer/'+ val , this.getTrainerById)
+    return this.http.put(this.APIUrl + '/trainer', val )
   }
 
   deleteTrainer(val:any){
@@ -43,7 +43,7 @@ export class SharedService {
   }
 
   updateProgram(val:any){
-    return this.http.put(this.APIUrl + '/program/', val)
+    return this.http.put(this.APIUrl + '/program', val)
   }
 
   deleteProgram(val:any){

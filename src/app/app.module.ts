@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProgramComponent } from './program/program.component';
 import { ShowProgramComponent } from './program/show-program/show-program.component';
 import { AddEditProgComponent } from './program/add-edit-prog/add-edit-prog.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { AddEditProgComponent } from './program/add-edit-prog/add-edit-prog.comp
     ProgramComponent,
     ShowProgramComponent,
     AddEditProgComponent,
+    LoginComponent,
     
   ],
   imports: [

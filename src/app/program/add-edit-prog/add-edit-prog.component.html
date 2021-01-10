@@ -3,7 +3,7 @@
     <div class ="form-froup row">
     <label class ="col-sm-2 col-form-label">Program Name</label>
     <div class ="col-sm-10">
-        <input type ="text" class ="form-control" [(ngModel)] ="name"
+        <input type ="text" class ="form-control" [(ngModel)] ="progName"
         placeholder="Enter Program Name">
     </div>
     
@@ -20,13 +20,17 @@
     </div>
     
 
-    <label class ="col-sm-2 col-form-label">TrainerId</label>
+    <label class ="col-sm-2 col-form-label">Trainer</label>
     <div class ="col-sm-10">
-        <input type ="text" class ="form-control" [(ngModel)] ="trainer"
-        placeholder="Enter TrainerID">
+    <select class = "form-control" [(ngModel)] = "trainer" id="Trainer" name="Trainer">
+        <option>--Select--</option>
+            <option *ngFor="let trainerx of trainersList" [ngValue]= trainerx >
+                {{trainerx.name}}
+        </option>
+    </select>
+        <p>Trainer:{{trainer.name}}</p>
     </div>
-    </div>
-</div>
+   
 
 <button (click) = "addProgram()" *ngIf="program.programID==0" class="btn btn-primary">
     Add

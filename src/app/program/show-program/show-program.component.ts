@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Trainer } from 'src/app/model/trainer';
 import { SharedService } from 'src/app/shared.service';
 
 @Component({
@@ -22,7 +23,7 @@ export class ShowProgramComponent implements OnInit {
   addClick(){
     this.program= {
       programID: 0,
-      name: "",
+      progName: "",
       category:"",
       description: "",
       trainer: ""
@@ -40,8 +41,8 @@ export class ShowProgramComponent implements OnInit {
 
   deleteClick(item){
     if(confirm('Are you sure?')){
-      this.service.deleteTrainer(item.programID).subscribe(data =>{
-        alert(data.toString());
+      this.service.deleteProgram(item.programID).subscribe(data =>{
+       // alert(data.toString());
         this.refreshProgramList();
       })
     }

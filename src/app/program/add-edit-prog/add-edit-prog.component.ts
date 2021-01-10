@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Trainer } from 'src/app/model/trainer';
 import {SharedService} from 'src/app/shared.service';
 
 @Component({
@@ -12,29 +13,39 @@ export class AddEditProgComponent implements OnInit {
 
   @Input() program:any;
   programID:string;
-  name:string;
+  progName:string;
   category:string;
   description:string;
-  trainer:string;
+  trainersList:Trainer[]= [];
+  trainer:Trainer = new Trainer();
   
 
-
   ngOnInit(): void {
+    this.trainer=new Trainer();
+    this.loadTrainerList();
+  }
+
+  loadTrainerList(){
+    this.service.getTrainerList().subscribe((data:any)=>{
+    this.trainersList = data;
+    
     this.programID=this.program.programID;
-    this.name=this.program.name;
+    this.progName=this.program.progName;
     this.category=this.program.category;
     this.description=this.program.description;
     this.trainer=this.program.trainer;
-  }
+  });
+}
 
   addProgram(){
     var val = {programID:this.programID,
-              name:this.name,
+              progName:this.progName,
               category:this.category,
               description:this.description,
               trainer:this.trainer};
         this.service.addProgram(val).subscribe(res=>{
-          alert(res.toString());
+         // alert(res.toString());
+       
          
         });
       }
@@ -43,7 +54,7 @@ export class AddEditProgComponent implements OnInit {
 
   updateProgram(){
     var val = {programID:this.programID,
-      name:this.name,
+      progName:this.progName,
       category:this.category,
       description:this.description,
       trainer:this.trainer};
@@ -52,5 +63,6 @@ export class AddEditProgComponent implements OnInit {
   });
 
   }
+  
 
 }
