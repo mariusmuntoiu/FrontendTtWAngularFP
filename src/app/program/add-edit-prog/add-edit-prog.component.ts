@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Trainer } from 'src/app/model/trainer';
+import { Trainer } from 'src/app/model/trainer-model';
 import {SharedService} from 'src/app/shared.service';
 
 @Component({
@@ -8,6 +8,7 @@ import {SharedService} from 'src/app/shared.service';
   styleUrls: ['./add-edit-prog.component.css']
 })
 export class AddEditProgComponent implements OnInit {
+
 
   constructor(private service:SharedService) { }
 
@@ -44,7 +45,7 @@ export class AddEditProgComponent implements OnInit {
               description:this.description,
               trainer:this.trainer};
         this.service.addProgram(val).subscribe(res=>{
-         // alert(res.toString());
+          alert("Added Succsessfully");
        
          
         });
@@ -59,7 +60,7 @@ export class AddEditProgComponent implements OnInit {
       description:this.description,
       trainer:this.trainer};
     this.service.updateProgram(val).subscribe(res=>{
-      alert(res.toString());
+      alert("Updated Succsessfully");
   });
 
   }

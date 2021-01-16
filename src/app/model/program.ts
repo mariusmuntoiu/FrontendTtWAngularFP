@@ -1,4 +1,4 @@
-import { Trainer } from "./trainer";
+import { Trainer } from "./trainer-model";
 
 export class Program {
     programID: number;

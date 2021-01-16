@@ -12,7 +12,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProgramComponent } from './program/program.component';
 import { ShowProgramComponent } from './program/show-program/show-program.component';
 import { AddEditProgComponent } from './program/add-edit-prog/add-edit-prog.component';
+import { CourseComponent } from './course/course.component';
+import { ShowCourseComponent } from './course/show-course/show-course.component';
+import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+
+
 
 
 @NgModule({
@@ -24,7 +29,12 @@ import { LoginComponent } from './login/login.component';
     ProgramComponent,
     ShowProgramComponent,
     AddEditProgComponent,
+    CourseComponent,
+    ShowCourseComponent,
+    HomeComponent,
     LoginComponent,
+    
+    
     
   ],
   imports: [

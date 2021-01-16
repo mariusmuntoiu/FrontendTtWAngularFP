@@ -53,4 +53,20 @@ export class SharedService {
  // getAllTrainers():Observable<any>{
    // return this.http.get<any[]>(this.APIUrl+'/trainer/getAllTrainers');
   //}
+
+  getCourseList(){
+    return this.http.get<any>(this.APIUrl+ '/courses')
+  }
+  addCourse(val:any){
+  return this.http.post(this.APIUrl+ '/course', val)
+  }
+
+  updateCourse(val:any){
+  return this.http.put(this.APIUrl + '/courses', val)
+  }
+
+  deleteCourse(val:any){
+  return this.http.delete(this.APIUrl+'/courses/'+ val)
+  }
+
 }

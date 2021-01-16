@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Trainer } from 'src/app/model/trainer';
+
 import { SharedService } from 'src/app/shared.service';
 
 @Component({
