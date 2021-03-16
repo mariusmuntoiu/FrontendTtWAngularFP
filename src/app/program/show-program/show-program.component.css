@@ -1,0 +1,30 @@
+.thead {
+    background-color: #E7EAEE;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:rgb(51, 39, 39);
+    font-weight: 600;
+}
+
+.tbody {
+    background-color: #ABB6C4;
+    font:large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+}
+
+.tdid{
+    color:#FF6624;
+    text-shadow: black;
+}
+
+.btn:hover{
+    color:red;
+}
+
+.but:hover {
+    color:green;
+    
+}
+
+
+

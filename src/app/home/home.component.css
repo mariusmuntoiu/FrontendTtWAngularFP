@@ -1,16 +1,22 @@
-body {
-   border-radius:12px;
-   transition: all 100ms ease-in-out;
-   background-attachment: fixed;
+.bodycustom {
+   /* border-radius:12px;
+   transition: all 100ms ease-in-out; */
+   /* background-attachment: fixed; */
+   background-color: black;
+   color: black;
+   /* background-image: url('https://images.pexels.com/photos/4720236/pexels-photo-4720236.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'); */
    
 }
 
 h1{
- font-family: Georgia, 'Times New Roman', Times, serif;
- font-weight: 600;
- font-style: italic;
- text-align: center;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-weight: 800;
+   font-variant: small-caps;
+   color:darkblue;
+   text-align: center;
+   text-shadow: rgb(230, 80, 25);
 }
+
 
 .center{
    display: block;
@@ -19,6 +25,64 @@ h1{
    width:50%;
 
  }
+ 
+ .titlediv{
+    background-color: rgb(235, 179, 68);
+    border-style:solid;
+    box-sizing: content-box;
+    color:black;
+    
+ }
 
 
 
+ .bio{
+    
+   border-radius: 15cm;
+   margin-top: 15px;
+   margin-left: 80px;
+   width: 50%;
+   box-sizing: content-box;
+   padding-top: 50px;
+   padding-right: 30px;
+   padding-bottom: 50px;
+   padding-left: 80px;
+   color: #fff;
+   font-weight: 500;
+   background-color:rgba(0, 0, 0, 0.6);
+   font-weight: bold;
+      
+ }
+ 
+ .info{
+   margin-top: 30px;
+   margin-left: 50px;
+   margin-right: 65%;
+   font-weight: bold;
+   color:#fff;
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   background-color: rgba(0, 0, 0, 0.3);
+   border:1px hidden black;
+   border-radius: 15cm;
+  
+   
+  
+   
+   
+    
+ }
+
+ 
+.butt{
+   margin-top: 30px;
+}
+img {
+   display: block; 
+   margin-left: auto;
+   margin-right: auto; 
+   bottom:10cm;
+   
+   
+   
+   float: right;  
+}

@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { BasicAuthenticationService } from './login/basic-authentication.service';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,25 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'TrainerApp';
-}
+  userDisplayName= "";
+  
+  constructor(public _basicAuthService:BasicAuthenticationService,
+              private router:Router){}
+      
+  logout(){
+    sessionStorage.removeItem('authenticatedUser')
+    sessionStorage.removeItem('token')
+    this.router.navigate(['/home']);
+  }
+
+  
+    ngOnInit() {
+      this.userDisplayName = sessionStorage.getItem('authenticatedUser');
+      
+       
+    }
+
+  }
+
+  
+
