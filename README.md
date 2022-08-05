@@ -1,4 +1,4 @@
-# TrainerTheWayApp
+# TrainTheWayApp
 
 "TrainTheWay" is a web application designed to be used by personal trainers with the purpose of achieving three main objectives:
 1. Advertising for the personal trainers.
